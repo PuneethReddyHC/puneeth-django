@@ -15,6 +15,7 @@ sitemaps = {
 
 urlpatterns = [
     # add your own patterns here
+    
     path('careers/', include('jobsapp.urls'), name="careers-urls"),
     path('blogs/', include('blog.urls'), name="blogs-urls"),
     path('', include('accounts.urls'), name="account-urls"),
