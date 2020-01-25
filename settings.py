@@ -18,7 +18,6 @@ INSTALLED_ADDONS = [
     'aldryn-addons',
     'aldryn-django',
     'aldryn-sso',
-    'divio-telemetry-apm',
     # </INSTALLED_ADDONS>
 ]
 
