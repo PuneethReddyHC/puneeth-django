@@ -22,7 +22,6 @@ INSTALLED_ADDONS = [
     'djangocms-bootstrap4',
     'djangocms-icon',
     'django-filer',
-    'djangocms-html-tags',
     # </INSTALLED_ADDONS>
 ]
 
