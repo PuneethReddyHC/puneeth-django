@@ -1,10 +1,11 @@
 from django.db import models
+from accounts.models import User
 STATUS = ((0, "Draft"), (1, "Publish"))
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey('accounts.User', on_delete=models.CASCADE, related_name="blog_posts")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
     #author = models.ForeignKey(
      #   User, on_delete=models.CASCADE, related_name="blog_posts"
     #)
