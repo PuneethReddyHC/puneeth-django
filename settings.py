@@ -56,7 +56,7 @@ INSTALLED_APPS.extend([
 
 CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = ['*']
-AUTH_USER_MODEL = "accounts.UserManager"
+AUTH_USER_MODEL = "accounts.User"
 CORS_ALLOW_METHODS = (
     'DELETE',
     'GET',
