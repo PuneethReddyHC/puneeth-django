@@ -1,4 +1,4 @@
-from django.contrib.auth.models import AbstractUser,PermissionsMixin
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 from accounts.managers import UserManager
@@ -8,7 +8,7 @@ GENDER_CHOICES = (
     ('female', 'Female'))
 
 
-class User(AbstractUser, PermissionsMixin):
+class User(AbstractUser):
     username = None
     role = models.CharField(max_length=12, error_messages={
         'required': "Role must be provided"
