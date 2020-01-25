@@ -69,7 +69,6 @@ CORS_ALLOW_METHODS = (
     'POST',
     'PUT',
 )
-AUTH_USER_MODEL = "accounts.user"
 CORS_ALLOW_HEADERS = (
     'accept',
     'accept-encoding',
