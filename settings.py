@@ -18,6 +18,7 @@ INSTALLED_ADDONS = [
     'aldryn-addons',
     'aldryn-django',
     'aldryn-sso',
+    'aldryn-sitemap',
     # </INSTALLED_ADDONS>
 ]
 
