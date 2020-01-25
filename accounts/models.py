@@ -10,7 +10,6 @@ GENDER_CHOICES = (
 
 class User(AbstractUser, PermissionsMixin):
     username = None
-    is_admin = models.BooleanField(default=False)
     role = models.CharField(max_length=12, error_messages={
         'required': "Role must be provided"
     })
