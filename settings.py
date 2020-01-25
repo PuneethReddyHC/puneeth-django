@@ -19,7 +19,6 @@ INSTALLED_ADDONS = [
     'aldryn-django',
     'aldryn-sso',
     'aldryn-django-cms',
-    'djangocms-icon',
     # </INSTALLED_ADDONS>
 ]
 
