@@ -4,7 +4,6 @@ https://control.divio.com/api/v1/apps/serve/aldryn-django/2.2.9.1/85747c8f-da54-
 https://control.divio.com/api/v1/apps/serve/aldryn-sso/1.6.0/6d90e844-d7ef-4faa-b527-5df3d49277be/aldryn-sso-1.6.0.tar.gz#egg=aldryn-sso==1.6.0
 https://control.divio.com/api/v1/apps/serve/aldryn-django-cms/3.7.1.1/e5e04b5b-3c92-43c5-8075-ca5a9b0231b2/aldryn-django-cms-3.7.1.1.tar.gz#egg=aldryn-django-cms==3.7.1.1
 https://control.divio.com/api/v1/apps/serve/djangocms-icon/1.4.2/f939ef12-daa7-42ba-a1a5-31695f560295/djangocms-icon-1.4.2.tar.gz#egg=djangocms-icon==1.4.2
-https://control.divio.com/api/v1/apps/serve/django-filer/1.6.0/ea2f6055-3bc9-4bf7-a341-e1901ac15269/django-filer-1.6.0.tar.gz#egg=django-filer==1.6.0
 # </INSTALLED_ADDONS>
 
 # <INSTALLED_APPS>
