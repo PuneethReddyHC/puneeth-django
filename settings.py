@@ -19,6 +19,7 @@ INSTALLED_ADDONS = [
     'aldryn-django',
     'aldryn-sso',
     'aldryn-django-cms',
+    'djangocms-bootstrap4',
     'django-filer',
     # </INSTALLED_ADDONS>
 ]
