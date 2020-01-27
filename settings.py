@@ -43,7 +43,6 @@ aldryn_addons.settings.load(locals())
 
 INSTALLED_APPS.extend([
     # Extend the INSTALLED_APPS setting by listing additional applications here
-    
     "hello",
     "blog",
     'accounts',
@@ -56,7 +55,6 @@ INSTALLED_APPS.extend([
 
 CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = ['*']
-AUTH_USER_MODEL = "accounts.user"
 CORS_ALLOW_METHODS = (
     'DELETE',
     'GET',

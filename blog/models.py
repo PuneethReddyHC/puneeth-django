@@ -1,7 +1,10 @@
 from django.db import models
 from accounts.models import User
-STATUS = ((0, "Draft"), (1, "Publish"))
+from django_summernote.widgets import SummernoteInplaceWidget
 
+from django.urls import reverse
+
+STATUS = ((0, "Draft"), (1, "Publish"))
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -21,7 +24,7 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        from django.urls import reverse
+        
 
         return reverse("post_detail", kwargs={"slug": str(self.slug)})
 
