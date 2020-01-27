@@ -1,15 +1,39 @@
-from django.views import generic
-from .models import Post
-from .forms import CommentForm
+from blog.forms import CommentForm
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
+from django.utils.decorators import method_decorator
+from django.views.generic import CreateView, ListView
 
+from jobsapp.decorators import user_is_employer
+from blog.forms import CreatePostForm
+from blog.models import Post
 
-class PostList(generic.ListView):
+from accounts.models import User
+from django import forms
+from django.shortcuts import render
+from django_summernote.widgets import SummernoteWidget
+class PostList(ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "blogs.html"
     paginate_by = 3
+STATUS = ((0, "Draft"), (1, "Publish"))
+ 
+def index(request):
+    passed = False
+    form = CreatePostForm()
 
+    if request.method == "POST":
+        form = CreatePostForm(request.POST)
+        if form.is_valid():
+            passed = True
+            form = CreatePostForm()
 
+    return render(request, 'create.html', {
+        'passed': passed,
+        'Post_form': form,
+    })
+    
 def post_detail(request, slug):
     template_name = "post_detail.html"
     post = get_object_or_404(Post, slug=slug)

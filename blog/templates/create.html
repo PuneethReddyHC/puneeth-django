@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'app/css/bootstrap-select.min.css' %}">
+
+{% endblock %}
+ 
+{% load crispy_forms_tags %}
+{% block content %}
+  <!-- ***** Breadcrumb Area Start ***** -->
+   {{ form.media }}
+  <style>
+  .invalid {
+    border: 5px solid red;
+  }
+  </style>
+
+  <div class="breadcrumb-area">
+    <div class="container h-75">
+        <div class="row h-75 align-items-end">
+            <div class="col-12">
+                <div class="breadcumb--con">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Background Curve -->
+    <div class="breadcrumb-bg-curve">
+        <img src="{% static 'app/img/core-img/curve-5.png' %}" alt="">
+    </div>
+</div>
+<!-- ***** Breadcrumb Area End ***** -->
+    <section class="bg-light-gray negative-margin-140">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="heading">Add a  <span class="accent">New</span> position</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                <h1>django-summernote playground</h1>
+                </div>
+                <div class="row">
+                <p>Theme: {{ theme }}</p>
+                </div>
+                {% if passed %}
+                <div class="row">
+                <div class="alert alert-primary" role="alert">
+                    Valid form, passed!
+                </div>
+                </div>
+                {% endif %}
+                <div class="row">
+                <form action="#" enctype="multipart/form-data" method="post">
+                                          {{ Post_form | crispy }}
+                                              {% csrf_token %}
+                                            <div class="row">
+                                              
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn uza-btn btn-3 mt-15">Post Comment</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

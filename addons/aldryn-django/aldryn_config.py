@@ -218,7 +218,7 @@ class Form(forms.BaseForm):
 
     def domain_settings(self, data, settings, env):
         from aldryn_addons.utils import boolean_ish
-
+        
         settings['ALLOWED_HOSTS'] = env('ALLOWED_HOSTS', ['localhost', '*'])
         # will take a full config dict from ALDRYN_SITES_DOMAINS if available,
         # otherwise fall back to constructing the dict from DOMAIN,
@@ -262,7 +262,7 @@ class Form(forms.BaseForm):
             settings['ALLOWED_HOSTS'].extend(site_domains['redirects'])
 
         settings['INSTALLED_APPS'].append('aldryn_sites')
-
+        settings['AUTH_USER_MODEL'] = env('AUTH_USER_MODEL', 'accounts.user')
         settings['MIDDLEWARE'].insert(
             settings['MIDDLEWARE'].index('django.middleware.common.CommonMiddleware'),
             'aldryn_sites.middleware.SiteMiddleware',

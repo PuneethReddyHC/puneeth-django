@@ -22,7 +22,6 @@ urlpatterns = [
     path('api/', include([
         path('', include('jobsapp.api.urls')),
     ])),
-    
     path("summernote/", include("django_summernote.urls")),
     path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="sitemap"),
     url(r'^$', hello.views.home, name='home'),
