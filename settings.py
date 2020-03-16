@@ -18,7 +18,6 @@ INSTALLED_ADDONS = [
     'aldryn-addons',
     'aldryn-django',
     'aldryn-sso',
-    'aldryn-django-debug-toolbar',
     # </INSTALLED_ADDONS>
 ]
 
